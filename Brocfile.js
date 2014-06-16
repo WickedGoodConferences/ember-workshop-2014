@@ -38,6 +38,9 @@ app.import({
   ]
 });
 
+app.import('vendor/firebase/firebase.js');
+app.import('vendor/emberfire/dist/emberfire.js');
+
 app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   'ic-ajax': [
     'default',

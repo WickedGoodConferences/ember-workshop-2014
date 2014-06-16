@@ -6,7 +6,11 @@ export default Ember.Route.extend({
   },
   actions: {
     create: function() {
-      this.transitionTo('people');
+      var routeContext = this;
+
+      this.controller.get('model').save().then(function() {
+        routeContext.transitionTo('people');
+      });
     }
   }
 });

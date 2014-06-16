@@ -1,0 +1,9 @@
+<p>It shows all the people</p>
+
+{{link-to 'Show Person' 'people.show'}}
+
+<ul>
+  {{#each person in controller}}
+    <li>{{person.name}}</li>
+  {{/each}}
+</ul>

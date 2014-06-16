@@ -1,9 +1,9 @@
 <p>It shows all the people</p>
 
-{{link-to 'Show Person' 'people.show'}}
-
 <ul>
   {{#each person in controller}}
-    <li>{{person.name}}</li>
+    <li>{{link-to person.name 'people.show' person}}</li>
+  {{else}}
+    You have no people {{link-to 'create one!' 'people.new'}}
   {{/each}}
 </ul>

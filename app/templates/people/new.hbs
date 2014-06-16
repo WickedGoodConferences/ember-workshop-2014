@@ -1,0 +1,16 @@
+<h3>Create
+  {{#if name}}
+    {{name}}
+  {{else}}
+    a new person
+  {{/if}}
+</h3>
+
+<div>
+Name: {{input value=name}}
+</div>
+<div>
+  Age: {{input value=age}}
+</div>
+
+<button type="submit" {{action 'create'}}>Create</button>

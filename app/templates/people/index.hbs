@@ -2,7 +2,7 @@
 
 <ul>
   {{#each person in controller}}
-    <li>{{link-to person.name 'people.show' person}}</li>
+    <li>{{link-to person.name 'people.show' person}} <a href="#" {{action 'destroyRecord' person}}>Destroy</a></li>
   {{else}}
     You have no people {{link-to 'create one!' 'people.new'}}
   {{/each}}

@@ -12,5 +12,11 @@ export default Ember.Route.extend({
         routeContext.transitionTo('people');
       });
     }
+  },
+  deactivate: function() {
+    var model = this.get('controller.model');
+    if (model.get('isNew')) {
+      model.deleteRecord();
+    }
   }
 });
